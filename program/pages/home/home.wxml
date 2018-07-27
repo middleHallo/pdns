@@ -1,0 +1,10 @@
+<!--pages/home/home.wxml-->
+<view class='container'>
+  <block wx:for="{{datalist}}" wx:key="{{index}}">
+    <view class='row'>
+      <image src='{{item.imgurl}}' mode='widthFix' style='width:710rpx;'></image>
+      <text class='title'>{{item.title}}</text>
+      <text class='source'> -- {{item.source}}</text>
+    </view>
+  </block>
+</view>

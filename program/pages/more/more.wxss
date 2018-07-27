@@ -1,0 +1,49 @@
+/* pages/more/more.wxss */
+
+/* pages/home/home.wxss */
+
+.container{
+  background-color: #E3E3E3;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+.row{
+  /* position: relative; */
+  margin: 10rpx;
+  padding: 10rpx;
+  background-color: white;
+  
+}
+
+.title{
+  /* position: absolute;
+  bottom: 15px;
+  left: 20px; */
+  display: block;
+  color: black;
+  width: 710rpx;
+  word-break:break-all;
+  text-align: left;
+  /* font-weight: bold; */
+}
+
+.source{
+  display: block;
+  color: black;
+  text-align: right;
+  padding-right: 8px;
+  font-size: 15px;
+}
+
+.moreTips{
+  color: #A1A1A1;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.addMore{
+  text-decoration: underline;
+}

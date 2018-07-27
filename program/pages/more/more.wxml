@@ -1,0 +1,12 @@
+<!--pages/more/more.wxml-->
+<view class='container'>
+  <block wx:for="{{datalist}}" wx:key="{{index}}">
+    <view class='row'>
+      <image src='{{item.imgurl}}' mode='widthFix' style='width:710rpx;'></image>
+      <text class='title'>{{item.title}}</text>
+      <text class='source'> -- {{item.source}}</text>
+    </view>
+  </block>
+  <text wx:if="{{currentPage < totalPage?true:false}}" class='moreTips addMore' bindtap='addMore'>点击加载更多...</text>
+  <text wx:else class='moreTips'>--^_^-- 到底啦! --^_^--</text>
+</view>
