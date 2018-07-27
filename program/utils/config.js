@@ -12,8 +12,6 @@ var config = {
 
   // 
   service: {
-   // host,
-    // baseurl
     requesturl: `${host}/cq/`
   }
 }
