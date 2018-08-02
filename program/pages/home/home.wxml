@@ -2,9 +2,10 @@
 <view class='container'>
   <block wx:for="{{datalist}}" wx:key="{{index}}">
     <view class='row'>
-      <image src='{{item.imgurl}}' mode='widthFix' style='width:710rpx;'></image>
+      <image src='{{item.imgurl}}' mode='widthFix' style='width:710rpx;' bindtap='clickImg' data-idx='{{index}}'></image>
       <text class='title'>{{item.title}}</text>
       <text class='source'> -- {{item.source}}</text>
     </view>
   </block>
 </view>
+

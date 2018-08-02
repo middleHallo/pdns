@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    datalist:[]
+    datalist:[],
+    bottom:30,
+    right:20
   },
 
   /**
@@ -21,17 +23,24 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.refresh()
+  },
+
+  /**
+   * 刷新数据
+   */
+  refresh:function(){
     wx.showLoading({
       title: '加载中...',
     })
     let url = config.service.requesturl + "index/getPndsTj"
     let that = this
 
-    utils.getData(url,function(res){
+    utils.getData(url, function (res) {
 
-      if(res.data.code == 200){
+      if (res.data.code == 200) {
         that.setData({
-          datalist:res.data.lists
+          datalist: res.data.lists
         })
         wx.hideLoading()
       }
@@ -42,7 +51,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // 如果之前没加载成功，则再加载一次
+    let dataList = this.data.datalist
+    if(dataList.length == 0){
+      this.refresh()
+    }
+  },
+
+  /**
+   * 预览图片
+   */
+  clickImg:function(e){
+    let idx = e.currentTarget.dataset.idx
+    let data = this.data.datalist[idx]
+    let urls = [data['imgurl']]
+
+    wx.previewImage({
+      urls: urls,
+    })
   },
 
   /**
