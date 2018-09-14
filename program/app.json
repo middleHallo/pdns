@@ -1,10 +1,8 @@
 {
   "pages":[
     "pages/home/home",
-    "pages/me/me",
-    "pages/detail/detail",
-    "pages/start/start",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/me/me"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -16,20 +14,20 @@
     "list": [{
       "pagePath": "pages/home/home",
       "text": "推荐",
-      "iconPath": "images/home.jpg",
-      "selectedIconPath": "images/home_select.jpg"
+      "iconPath": "/images/home.jpg",
+      "selectedIconPath": "/images/home_select.jpg"
     },
     {
       "pagePath": "pages/more/more",
       "text": "发现",
-      "iconPath": "images/look.png",
-      "selectedIconPath": "images/look_select.png"
+      "iconPath": "/images/look.png",
+      "selectedIconPath": "/images/look_select.png"
     },
     {
       "pagePath": "pages/me/me",
       "text": "关于",
-      "iconPath": "images/us.png",
-      "selectedIconPath": "images/us_select.png"
+      "iconPath": "/images/us.png",
+      "selectedIconPath": "/images/us_select.png"
     }]
   }
 }
